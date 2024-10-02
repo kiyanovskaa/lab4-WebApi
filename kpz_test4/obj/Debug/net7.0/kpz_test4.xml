@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>kpz_test4</name>
+    </assembly>
+    <members>
+        <member name="M:kpz_test4.Controllers.jewelryController.GetJewelry">
+            <summary>
+            Отримати список всіх прикрас
+            </summary>
+            <response code="200">Повертає список всіх прикрас</response>
+            <response code="404">Якщо список прикрас порожній</response>
+        </member>
+        <member name="M:kpz_test4.Controllers.jewelryController.GetJewelryById(System.Int32)">
+            <summary>
+            Отримати прикрасу за її ідентифікатором
+            </summary>
+            <param name="id">Ідентифікатор прикраси</param>
+            <response code="200">Повертає прикрасу з вказаним ідентифікатором</response>
+            <response code="404">Якщо прикрасу не знайдено за вказаним ідентифікатором</response>
+        </member>
+        <member name="M:kpz_test4.Controllers.jewelryController.PostJewelry(kpz_test4.Models.Jewelry)">
+             <summary>
+             Додати нову прикрасу
+             </summary>
+             <remarks>
+             Приклад запиту:
+            
+                 POST
+                 {
+                    "id": 0,
+                     "jewelry_name": "NameJewelry",
+                      "price": 100,
+                     "discount_id": 2,
+                       "category_id": 1
+                 }
+            
+             </remarks>
+             <response code="201">Повертає щойно створену прикрасу</response>
+             <response code="400">Якщо елемент нульовий</response>
+        </member>
+        <member name="M:kpz_test4.Controllers.jewelryController.PutJewelry(System.Int32,kpz_test4.Models.Jewelry)">
+            <summary>
+            Оновити інформацію про прикрасу за її ідентифікатором
+            </summary>
+            <param name="id">Ідентифікатор прикраси</param>
+            <param name="jewelry">Об'єкт прикраси з новою інформацією</param>
+            <response code="200">Повертається при успішному оновленні інформації про прикрасу</response>
+            <response code="400">Якщо ідентифікатор прикраси не збігається з id у тілі запиту</response>
+            <response code="404">Якщо прикрасу з вказаним ідентифікатором не знайдено</response>
+        </member>
+        <member name="M:kpz_test4.Controllers.jewelryController.DeleteJewelry(System.Int32)">
+            <summary>
+            Видалити прикрасу за її ідентифікатором
+            </summary>
+            <param name="id">Ідентифікатор прикраси, яку слід видалити</param>
+            <response code="200">Повертається при успішному видаленні прикраси</response>
+            <response code="404">Якщо прикрасу з вказаним ідентифікатором не знайдено</response>
+        </member>
+        <member name="T:kpz_test4.Migrations.Initial">
+            <inheritdoc />
+        </member>
+        <member name="M:kpz_test4.Migrations.Initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:kpz_test4.Migrations.Initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:kpz_test4.Migrations.Initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
